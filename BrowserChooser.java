@@ -44,7 +44,12 @@ public class BrowserChooser {
 		if (getDomainString(site).equals(ieDomain) ) { 
 			browser = "iexplore";
 		} else {
-			browser = "chrome";
+			File chromeExe = new File("C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe");
+			if (chromeExe.exists()) {
+				browser = "chrome";
+			} else {
+				browser = "iexplore";
+			}
 		}
 	}
 
